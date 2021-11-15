@@ -7,7 +7,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Montserrat", sans-serif;
-  background-color: #757bc8;
+  background-color: #264653;
+  color: whitesmoke;
 }
 
 main {
@@ -53,11 +54,11 @@ main {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 20px;
   padding: 30px 0;
-  margin-top: 10px;
+  margin-top: 40px;
 }
 .headlines .headline {
   display: grid;
-  justify-items: center;
+  place-items: center;
 }
 .headlines .headline p {
   text-align: center;
@@ -66,30 +67,81 @@ main {
 }
 .headlines .headline .fas, .headlines .headline .far {
   font-size: 62px;
+  margin: 5px 0 10px 0;
 }
 
-@media only screen and (max-width: 690px) {
-  .headlines {
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-  }
+.about {
+  margin: 80px 0;
+  display: grid;
+  justify-items: center;
 }
-#about {
+.about h2 {
+  font-size: 42px;
   text-align: center;
+}
+.about p {
+  font-size: 24px;
+  max-width: 85%;
+  text-align: center;
+  line-height: 1.8em;
+}
+.about p span {
+  letter-spacing: 4px;
 }
 
 .content {
   margin: 20px 0;
   line-height: 2em;
   display: grid;
+  gap: 20px;
   grid-template-columns: 1fr 1fr;
 }
-.content .lang {
-  border: 2px solid gray;
+.content .lang, .content .tech {
+  border-radius: 4px;
+  background-color: #325d6e;
   padding: 4px;
 }
-.content .lang h3 {
+.content .lang h3, .content .tech h3 {
   text-align: center;
+  font-size: 24px;
+}
+.content .lang ul, .content .tech ul {
+  margin-top: 0;
+  display: grid;
+}
+.content .lang ul i, .content .tech ul i {
+  width: 50px;
+}
+.content .lang ul li, .content .tech ul li {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  font-size: 18px;
+}
+.content .lang .fas, .content .lang .fab, .content .tech .fas, .content .tech .fab {
+  font-size: 32px;
+}
+.content .tech ul {
+  grid-template-columns: 1fr 1fr;
+}
+.content .tech ul li {
+  margin: 17px 0;
+}
+
+@media only screen and (max-width: 690px) {
+  .headlines {
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    padding: 30px;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+  }
+  .content .lang, .content .tech {
+    justify-self: center;
+    width: 70%;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -6,11 +6,14 @@
     box-sizing: border-box;
 }
 
+$dark: #264653;
+
 body {
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
-    background-color: #757bc8;
+    background-color: $dark;
+    color: whitesmoke;
 }
 
 main {
@@ -65,11 +68,11 @@ main {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 20px;
     padding: 30px 0;
-    margin-top: 10px;
+    margin-top: 40px;
 
     .headline {
         display: grid;
-        justify-items: center;
+        place-items: center;
 
         p {
             text-align: center;
@@ -79,34 +82,102 @@ main {
 
         .fas, .far {
             font-size: 62px;
+            margin: 5px 0 10px 0;
         }
     }
 
 
 }
-@media only screen and (max-width: 690px) {
-        .headlines {
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
+
+.about {
+    margin: 80px 0;
+    display: grid;
+    justify-items: center;
+
+    h2 {
+        font-size: 42px;
+        text-align: center;
+    }
+
+    p {
+        font-size: 24px;
+        max-width: 85%;
+        text-align: center;
+        line-height: 1.8em;
+
+        span {
+            letter-spacing: 4px;
         }
+    }
 }
 
-
-#about {
-    text-align: center;
-}
 
 .content {
     margin: 20px 0;
     line-height: 2em;
     display: grid;
+    gap: 20px;
     grid-template-columns: 1fr 1fr;
-    .lang {
-        border: 2px solid gray;
+
+    .lang, .tech {
+        border-radius: 4px;
+        background-color: scale-color($dark, $lightness: 10%);
         padding: 4px;
+
         h3 {
             text-align: center;
+            font-size: 24px;
+        }
+
+        ul {
+            margin-top: 0;
+            display: grid;
+
+            i {
+                width: 50px;
+            }
+
+            li {
+                display: flex;
+                align-items: center;
+                list-style-type: none;
+                font-size: 18px;
+            }
+        }
+
+
+        .fas, .fab {
+            font-size: 32px;
+            // margin-right: 12px;
+        }
+    }
+
+    .tech {
+        ul {
+            grid-template-columns: 1fr 1fr;
+
+            li {
+                margin: 17px 0;
+            }
         }
     }
 }
 
+
+@media only screen and (max-width: 690px) {
+
+    .headlines {
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        padding: 30px;
+    }
+
+    .content {
+        grid-template-columns: 1fr;
+
+        .lang, .tech {
+            justify-self: center;
+            width: 70%;
+        }
+    }
+}
