@@ -11,21 +11,27 @@
     <!-- Styles -->
     <link rel="stylesheet" href="styles/main.css">
 
+    <!-- Sripts -->
+    <script src="./scripts/main.js"></script>
+
     <title>Bryan Curtis</title>
 </head>
 <body>
-    <!-- <nav>
-
-    </nav> -->
+    <!-- <nav></nav> -->
     <main>
 
-        <section class="container hero">
-            <img src="https://i.imgur.com/yinQ7OR.jpg" alt="">
+        <nav>
+            <h2 id="name" onClick="nameClick();">Bryan Curtis</h2>
+            <i class="fas fa-bars" alt="menu icon" id="burger" onClick="burgerClick();"></i>
+        </nav>
+
+        <section class="hero">
+            <img src="https://i.imgur.com/mkO50BY.png?1" alt="">
 
             <div class="image_overlay">
                 <div>
-                    <h2>My Portfolioli 🥺</h2>
-                    <p>Have A Look Around</p>
+                    <h2>Writing The Future</h2>
+                    <p>A Software Engineer For The Next Generation</p>
                 </div>
             </div>
             
@@ -104,10 +110,46 @@
                 </div>
     
             </section>
+        </section>
+
+        <section class="projects-header">
+            <h2>My Projects</h2>
+        </section>
+ 
+        <section class="projects">
+
+            <article class="project">
+                <img src="https://i.imgur.com/NyQ1eMi.png" alt="">
+
+                <div class="project-text">
+                    <h2>AllTrails Remaster</h2>  
+                    <p>A remastered version of the real <a href="http://www.alltrails.com">AllTrails</a> website mirroring style and functionality while adding new features as well. Built using Node.js, Express, MongoDB, Mongoose, and SASS.</p>          
+                </div>
+            </article>
+
+            <article class="project">
+                <img src="https://i.imgur.com/scSBIRt.png" alt="">
+
+                <div class="project-text">
+                    <h2>Exploria</h2>  
+                    <p>An art exploration and social media application called Exploria. Built using Django, Python, PostgreSQL, Bootstrap, and SASS, the application includes features like user account creation and editing, profile, posting content, and commenting.</p>          
+                </div>
+            </article>
+
+            <article class="project">
+                <img src="https://i.imgur.com/LSWMqFU.png?1" alt="">
+
+                <div class="project-text">
+                    <h2>Evolve</h2>  
+                    <p>A simple browser game that takes the traditional Tamagotchi idea and combines it with the fast pace challenge of a typical browser game.  Built primarily in JavaScript with vanilla HTML and CSS included.</p>          
+                </div>
+            </article>
 
         </section>
 
- 
+        <section class="contact">
+        
+        </section>
 
 
     </main>

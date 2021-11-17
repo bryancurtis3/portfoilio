@@ -6,26 +6,47 @@
     box-sizing: border-box;
 }
 
-$dark: #264653;
+$dark: #1d3557;
+$medium: #457b9d;
+$light: #f1faee;
 
 body {
     margin: 0;
     padding: 0;
+    width: 100vw;
     font-family: 'Montserrat', sans-serif;
     background-color: $dark;
-    color: whitesmoke;
+    color: $light;
 }
 
 main {
     display: grid;
-    justify-content: center;
+    justify-items: center;
 }
 
 .page {
     padding: 0 20px;
+    max-width: 900px;
 }
 
-.container {
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    height: 50px;
+    padding: 10px 20px;
+    position: fixed;
+    z-index: 2;
+    // background-image: linear-gradient(rgba(25, 25, 25, .5), rgba(25, 25, 25, .1));
+
+    h2, i {
+        margin: 0;
+        font-size: 22px;
+        font-weight: 500;
+        color: $light;
+        cursor: pointer;
+    }
 
 }
 
@@ -34,6 +55,8 @@ main {
     height: 66.66vw;
     max-width: 900px;
     max-height: 600px;
+    align-self: center;
+
     img {
         width: inherit;
         max-width: inherit;
@@ -41,25 +64,29 @@ main {
         object-fit:cover;
         object-position: center;
         position: absolute;
+        filter: blur(2px);
     }
+
     .image_overlay {
         width: inherit;
         max-width: inherit;
         height: inherit;
         max-height: inherit;
-
         position: absolute;
         display: grid;
         place-items: center;
         text-align: center;
+
         h2 {
-            color: palegreen;
+            color: $light;
             font-size: 48px;
+            word-wrap: normal;
+            margin: 20px 0;
         }
-        // dangerous way to set this
-        line-height: 0em;
 
-
+        p {
+            padding: 0 20px;
+        }
     }
 }
 
@@ -67,7 +94,7 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 20px;
-    padding: 30px 0;
+    padding: 30px 0 0 0;
     margin-top: 40px;
 
     .headline {
@@ -97,6 +124,7 @@ main {
     h2 {
         font-size: 42px;
         text-align: center;
+        margin: 32px 0 12px 0;
     }
 
     p {
@@ -113,16 +141,22 @@ main {
 
 
 .content {
-    margin: 20px 0;
+    max-width: 100%;
+    margin: 20px 0 50px 0;
+    justify-content: center;
     line-height: 2em;
-    display: grid;
-    gap: 20px;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    justify-content: space-around;
 
     .lang, .tech {
         border-radius: 4px;
         background-color: scale-color($dark, $lightness: 10%);
         padding: 4px;
+        transition: all .2s ease-in-out;
+        width: 100%;
+        min-width: 325px;
+        max-width: 375px;
+        margin: 0 auto;
 
         h3 {
             text-align: center;
@@ -152,9 +186,14 @@ main {
         }
     }
 
+    .lang:hover, .tech:hover {
+        background-color: scale-color($dark, $lightness: 15%);
+    }
+
     .tech {
         ul {
             grid-template-columns: 1fr 1fr;
+            grid-auto-rows: minmax(68px, 68px);
 
             li {
                 margin: 17px 0;
@@ -163,8 +202,75 @@ main {
     }
 }
 
+.projects-header {
+    width: 100vw;
+    font-size: 26px;
+    padding: 10px 0;
+    text-align: center;
+    background-color: $light;
+    color: scale-color($dark, $lightness: 15%);
+}
 
-@media only screen and (max-width: 690px) {
+.projects {
+
+    .project {
+        display: grid;
+        grid-template-areas: "img txt";
+        grid-template-columns: 2fr 3fr;
+        place-items: center;
+
+        img {
+            grid-area: img;
+            height: 350px;
+            width: 100%;
+            min-width: 50vw;
+            object-fit: cover;
+        }
+
+        .project-text {
+            grid-area: txt;
+            display: grid;
+            padding: 0 28px 0 35px;
+            color: $light;
+
+            h2 {
+                margin: 0 0 20px 0;
+                align-self: center;
+            }
+
+            p {
+                font-size: 18px;
+                line-height: 1.5em;
+                margin: 0;
+
+                a {
+                    color: $light;
+                }
+
+                a:hover {
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+    .project:nth-child(even) {
+        grid-template-areas: "txt img";
+        grid-template-columns: 3fr 2fr;
+    }
+
+}
+
+
+@media only screen and (max-width: 720px) {
+    .hero {
+        height: 500px;
+        max-width: 100%;
+        img {
+            height: inherit;
+            max-width: inherit;
+        }
+    }
 
     .headlines {
         grid-template-columns: 1fr 1fr;
@@ -173,11 +279,31 @@ main {
     }
 
     .content {
+        display: grid;
+        gap: 30px;
         grid-template-columns: 1fr;
 
         .lang, .tech {
             justify-self: center;
-            width: 70%;
+            width: 80%;
+        }
+    }
+
+    .projects {
+        // width: 90vw;
+        // -webkit-box-shadow: 0px 0px 12px 10px rgba(0,0,0,0.5); 
+        // box-shadow: 0px 0px 12px 10px rgba(0,0,0,0.2);
+
+        .project {
+            display: block;
+
+            .project-text {
+                margin: 45px 0 70px 0;
+            }
         }
     }
 }
+
+// Refine lang and tech boxes to grow slightly less wide than the rest of the main column and have slightly more padding/margin in and between
+
+// Get started on micro-interactions
