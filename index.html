@@ -16,14 +16,37 @@
 
     <title>Bryan Curtis</title>
 </head>
-<body>
+<body id="body">
     <!-- <nav></nav> -->
     <main>
 
         <nav>
             <h2 id="name" onClick="nameClick();">Bryan Curtis</h2>
-            <i class="fas fa-bars" alt="menu icon" id="burger" onClick="burgerClick();"></i>
+            <i 
+                class="fas fa-bars" 
+                alt="menu icon" 
+                id="burger" 
+                onClick="burgerClick();">
+            </i>
+            <i 
+                class="fas fa-times" 
+                alt="menu icon" 
+                id="burger-x" 
+                onClick="burgerClick();" 
+                style="display: none;">
+            </i>
+
         </nav>
+
+
+        <div id="overlay">
+            <div class="overlay-inner">
+                <a href="mailto: curtispro97@gmail.com">Contact</a>
+                <a href="https://github.com/bryancurtis3/">Github</a>
+                <a href="https://www.linkedin.com/in/bryancurtis3/">LinkedIn</a>
+                <a href="https://docs.google.com/document/d/1wgdMQPCXV4o7Qxi-nBkKxqrWHgMGky6T6upiYyWCGP4/edit?usp=sharing">Resume</a>
+            </div>
+        </div>
 
         <section class="hero">
             <img src="https://i.imgur.com/mkO50BY.png?1" alt="">
@@ -33,37 +56,40 @@
                     <h2>Writing The Future</h2>
                     <p>A Software Engineer For The Next Generation</p>
                 </div>
+                <a href="#scroll-down">
+                    <i class="fas fa-arrow-down"></i>
+                </a>
             </div>
             
         </section>
 
-        <section class="page">
+        <section class="page" id="scroll-down">
 
             <section class="headlines">
-                <div class="headline">
-                    <i class="fas fa-fingerprint"></i>
-                    <p>Unique Creativity</p>
-                </div>
+
                 <div class="headline">
                     <i class="fas fa-graduation-cap"></i>
-                    <p>Highly Trainable</p>
+                    <p>Proven Trainability</p>
                 </div>
                 <div class="headline">
                     <i class="far fa-gem"></i>
                     <p>Prestine Detailing</p>
-                </div>
+                </div>     
                 <div class="headline">
                     <i class="fas fa-feather-alt"></i>
                     <p>Ligthweight Code</p>
                 </div>
-                
+                <div class="headline">
+                    <i class="fas fa-fingerprint"></i>
+                    <p>Unique Creativity</p>
+                </div>
     
     
             </section>
     
             <section class="about">
                 <h2>Hi, I'm Bryan.</h2>
-                <p>I make things. Powerful, beautiful, wonderful software things. Have a look around and see for yoursel<span>f!</span></p>
+                <p>I make things. And a maker of things is what you came here in search of. So please, have a look around and see for yoursel<span>f!</span></p>
             </section>
     
             <section class="content">
@@ -113,34 +139,40 @@
         </section>
 
         <section class="projects-header">
-            <h2>My Projects</h2>
+            <h2>Projects</h2>
         </section>
  
         <section class="projects">
 
             <article class="project">
-                <img src="https://i.imgur.com/NyQ1eMi.png" alt="">
+                <a class="img-link" href="https://all-trails-remaster.herokuapp.com/" target="_blank">
+                    <img src="https://i.imgur.com/NyQ1eMi.png" alt="">
+                </a>
 
                 <div class="project-text">
-                    <h2>AllTrails Remaster</h2>  
-                    <p>A remastered version of the real <a href="http://www.alltrails.com">AllTrails</a> website mirroring style and functionality while adding new features as well. Built using Node.js, Express, MongoDB, Mongoose, and SASS.</p>          
+                    <a href="https://all-trails-remaster.herokuapp.com/" target="_blank">AllTrails Remaster</a>  
+                    <p>A remastered version of the real <a href="http://www.alltrails.com" target="_blank">AllTrails</a> website mirroring style and functionality while adding new features as well. Built using Node.js, Express, MongoDB, Mongoose, and SASS.</p>          
                 </div>
             </article>
 
             <article class="project">
-                <img src="https://i.imgur.com/scSBIRt.png" alt="">
+                <a class="img-link" href="https://exploria-app.herokuapp.com/" target="_blank">
+                    <img src="https://i.imgur.com/scSBIRt.png" alt="">
+                </a>
 
                 <div class="project-text">
-                    <h2>Exploria</h2>  
-                    <p>An art exploration and social media application called Exploria. Built using Django, Python, PostgreSQL, Bootstrap, and SASS, the application includes features like user account creation and editing, profile, posting content, and commenting.</p>          
+                    <a href="https://exploria-app.herokuapp.com/" target="_blank">Exploria</a>  
+                    <p>An art exploration and social media application. Built using Django, Python, PostgreSQL, Bootstrap, and SASS, the application includes features like user account creation and editing, profile, posting content, and commenting.</p>          
                 </div>
             </article>
 
             <article class="project">
-                <img src="https://i.imgur.com/LSWMqFU.png?1" alt="">
+                <a class="img-link" href="https://bryancurtis3.github.io/tamagotchi/" target="_blank">
+                    <img src="https://i.imgur.com/LSWMqFU.png?1" alt="">
+                </a>
 
                 <div class="project-text">
-                    <h2>Evolve</h2>  
+                    <a href="https://bryancurtis3.github.io/tamagotchi/" target="_blank">Evolve</a>  
                     <p>A simple browser game that takes the traditional Tamagotchi idea and combines it with the fast pace challenge of a typical browser game.  Built primarily in JavaScript with vanilla HTML and CSS included.</p>          
                 </div>
             </article>
@@ -148,7 +180,18 @@
         </section>
 
         <section class="contact">
-        
+            <p>Wanna know more?</p>
+            <div class="info">
+                <a target="_blank" href="https://www.linkedin.com/in/bryancurtis3/">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a target="_blank" href="https://github.com/bryancurtis3/">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a target="_blank" href="mailto: curtispro97@gmail.com">
+                    <i class="far fa-envelope"></i>
+                </a>
+            </div>
         </section>
 
 
