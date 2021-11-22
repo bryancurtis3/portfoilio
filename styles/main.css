@@ -51,30 +51,34 @@ nav h2, nav i {
 nav i {
   width: 20px;
   height: 22px;
+  position: fixed;
+  right: 20px;
   z-index: 12;
-  transition: 0.5s ease-in-out;
+  transition: 0.4s ease-in-out;
 }
 
 #overlay {
   width: 100vw;
-  height: 0;
   position: fixed;
-  visibility: hidden;
+  visibility: visible;
   backdrop-filter: blur(10px);
   transition: 0.4s ease-in-out;
   z-index: 10;
 }
-#overlay .overlay-inner {
+#overlay #overlay-inner {
+  position: fixed;
+  top: -100vh;
   width: inherit;
-  height: inherit;
+  height: 100vh;
   display: grid;
   grid-auto-rows: minmax(80px, 80px);
   place-items: center;
   padding-top: 150px;
   background-color: #1d3557;
   opacity: 0.8;
+  transition: 0.4s ease-in-out;
 }
-#overlay .overlay-inner a {
+#overlay #overlay-inner a {
   color: #f1faee;
   text-decoration: none;
   font-size: 52px;
@@ -82,7 +86,7 @@ nav i {
   opacity: 0.8;
   transition: 0.1s ease-in-out;
 }
-#overlay .overlay-inner a:hover {
+#overlay #overlay-inner a:hover {
   color: white;
   opacity: 1;
   transform: scale(1.05);

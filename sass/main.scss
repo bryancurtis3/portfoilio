@@ -59,8 +59,10 @@ nav {
     i {
         width: 20px;
         height: 22px;
+        position: fixed;
+        right: 20px;
         z-index: 12;
-        transition: .5s ease-in-out;
+        transition: .4s ease-in-out;
     }
 
 
@@ -68,22 +70,24 @@ nav {
 
 #overlay {
     width: 100vw;
-    height: 0;
     position: fixed;
-    visibility: hidden;
+    visibility: visible;
     backdrop-filter: blur(10px);
     transition: .4s ease-in-out;
     z-index: 10;
 
-    .overlay-inner {
+    #overlay-inner {
+        position: fixed;
+        top: -100vh;
         width: inherit;
-        height: inherit;
+        height: 100vh;
         display: grid;
         grid-auto-rows: minmax(80px, 80px);
         place-items: center;
         padding-top: 150px;
         background-color: $dark;
         opacity: .8;
+        transition: .4s ease-in-out;
 
         a {
             color: $light;
