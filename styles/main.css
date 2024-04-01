@@ -397,7 +397,6 @@ nav i {
 
   .projects {
     grid-template-columns: 1fr;
-    width: 80%;
     min-width: 355px;
   }
   .projects .project {
