@@ -86,17 +86,15 @@ nav i {
   transition: 0.4s ease-in-out;
 }
 #overlay #overlay-inner a {
-  color: #f1faee;
+  color: #75a4c2;
   text-decoration: none;
   font-size: 52px;
   font-weight: 600;
-  opacity: 0.8;
+  opacity: 0.9;
   transition: 0.1s ease-in-out;
 }
 #overlay #overlay-inner a:hover {
-  color: white;
-  opacity: 1;
-  transform: scale(1.05);
+  color: #f1faee;
 }
 
 .hero {
@@ -383,32 +381,38 @@ nav i {
     grid-template-columns: 1fr 1fr;
     gap: 50px;
     padding: 30px;
+    margin-top: 30px;
+  }
+
+  .about p {
+    max-width: 95%;
   }
 
   .content {
     display: grid;
     gap: 30px;
     grid-template-columns: 1fr;
+    margin-bottom: 40px;
   }
   .content .lang, .content .tech {
     justify-self: center;
-    width: 80%;
+    padding: 0;
   }
 
   .projects {
     grid-template-columns: 1fr;
     min-width: 355px;
+    padding: 40px 20px;
   }
   .projects .project {
     display: block;
-    margin: 20px;
     max-width: 450px;
   }
   .projects .project img {
     height: 250px;
   }
   .projects .project .project-text {
-    margin: 20px 0 28px 0;
+    padding: 25px 20px 20px 20px;
   }
 
   .contact p {
